@@ -9,10 +9,13 @@ const data = Data;
 import { Loop } from "./loop.js";
 const loop = Loop;
 
+import Header from "./header/header.js";
 
 export default class Index {
     constructor(creator, data, loop) {
         loop(creator, data[0], document.body);
+
+        const header = new Header(creator, data, loop);
     }
 }
 

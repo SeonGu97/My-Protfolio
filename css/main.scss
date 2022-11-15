@@ -1,0 +1,156 @@
+@import "reset";
+@import '_mixin';
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap');
+
+html {
+    @include full-size;
+    font-family: 'IBM Plex Sans KR', sans-serif;
+}
+
+body {
+    @include full-size;
+}
+
+#index {
+    @include grid;
+    @include full-size;
+    padding-top: $primary-size * 1.5;
+    box-sizing: border-box;
+    column-gap: $primary-size;
+    transition: padding .2s ease;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: $primary-size * 2.5;
+    grid-column: 1 / -1;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+}
+
+.header_front {
+    display: flex;
+    min-width: 350px;
+    height: 100%;
+    justify-content: space-between;
+    font-weight: bold;
+}
+
+.logo {
+    @include center;
+    font-size: $primary-size * 2;
+    cursor: pointer;
+    padding: 0 $primary-size;
+    margin: 0 $primary-size;
+    transition: all .2s ease;
+}
+
+.header_front_menu {
+    @include center;
+    cursor: pointer;
+    padding: 0 $half-size;
+}
+
+.header_back {
+    display: flex;
+    min-width: 350px;
+    height: 100%;
+    justify-content: space-around
+}
+
+.header_back_menu {
+    @include center;
+    cursor: pointer;
+    padding: 0 $half-size;
+}
+
+.bar {
+    display: none;
+    font-size: $primary-size * 2;
+    padding: 0 $half-size;
+    cursor: pointer;
+}
+
+@include desktop {
+    #index {
+        grid-template-columns: repeat($desktop-grid, 1fr);
+    }
+}
+
+@include tablet-width {
+    #index {
+        grid-template-columns: repeat($tablet-width-grid, 1fr);
+    }
+
+    .header_front {
+        min-width: auto;
+    }
+    
+    .logo {
+        
+    }
+    
+    .header_front_menu {
+        display: none;
+    }
+
+    .header_back {
+        min-width: auto;
+    }
+    
+    .header_back_menu {
+        display: none;
+    }
+
+    .bar {
+        @include center;
+        margin-right: $primary-size * 1.5;
+    }
+}
+
+@include tablet-height {
+    #index {
+        grid-template-columns: repeat($tablet-height-grid, 1fr);
+        padding-top: $half-size;
+    }
+
+    .header_front {
+        min-width: auto;
+    }
+    
+    .logo {
+        font-size: $primary-size * 1.5;
+        padding: 0 $half-size;
+        margin: 0 $half-size;
+    }
+    
+    .header_front_menu {
+        display: none;
+    }
+
+    .header_back {
+        min-width: auto;
+    }
+    
+    .header_back_menu {
+        display: none;
+    }
+
+    .bar {
+        @include center;
+        margin-right: $half-size;
+    }
+}
+
+@include mobile {
+    #index {
+        grid-template-columns: repeat($mobile-grid, 1fr);
+    }
+
+    .bar {
+        font-size: $primary-size * 1.5; 
+    }
+}
