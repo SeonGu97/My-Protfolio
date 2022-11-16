@@ -88,4 +88,70 @@ export const Data = [
         array: [],
         parent: null,
     },
+
+    { // main 8
+        name: 'main',
+        element: 'main',
+        type: [],
+        value: [],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // mountain 9
+        name: 'mountain',
+        element: 'section',
+        type: ['class'],
+        value: ['mountain'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // mountain 10
+        name: 'hill',
+        element: 'div',
+        type: ['class'],
+        value: ['hill'],
+        text: [],
+        number: 2,
+        array: [],
+        parent: null,
+    },
+
+    { // sun 11
+        name: 'sun',
+        element: 'div',
+        type: ['class'],
+        value: ['sun'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // sky 12
+        name: 'sky',
+        element: 'section',
+        type: ['class'],
+        value: ['sky'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // cloud 13
+        name: 'cloud',
+        element: 'img',
+        type: ['class', 'src'],
+        value: [],
+        text: [],
+        number: 3,
+        array: [],
+        parent: null,
+    },
 ];

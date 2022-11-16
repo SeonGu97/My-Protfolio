@@ -14,10 +14,10 @@ body {
 #index {
     @include grid;
     @include full-size;
-    padding-top: $primary-size * 1.5;
     box-sizing: border-box;
     column-gap: $primary-size;
     transition: padding .2s ease;
+    grid-template-rows: repeat(2, 1fr);
 }
 
 header {
@@ -26,9 +26,10 @@ header {
     height: $primary-size * 2.5;
     grid-column: 1 / -1;
     justify-content: space-between;
-    box-sizing: border-box;
-    position: sticky;
+    padding-top: $primary-size * 1.5;
+    position: fixed;
     top: 0;
+    z-index: 20;
 }
 
 .header_front {
@@ -74,6 +75,73 @@ header {
     cursor: pointer;
 }
 
+main {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(at 50% 100%, #b71c1c, #ff6d00 30%, goldenrod 60%, #263238 200%);
+    grid-column: 1 / -1;
+    grid-row: 1;
+    position: relative;
+    z-index: 5;
+    overflow: hidden;
+}
+
+.mountain {
+    display: flex;
+    width: 100%;
+    height: 50%;
+    align-items: flex-end;
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 0;
+}
+
+.hill:first-child {
+    width: 60%;
+    height: 65%;
+    border-radius: 100% 100% 0 0;
+    // transform: scale(1, .2);
+    background: darkgreen;
+    transform: rotate(.015turn) translate(-10%, 40%) scale(1, 1);
+    box-shadow: inset -5em .8em 1em 1em green;
+    z-index: 5;
+}
+
+.hill:last-child {
+    width: 65%;
+    height: 100%;
+    border-radius: 100% 100% 0 0;
+    background: green;
+    position: absolute;
+    right: 0;
+    transform: rotate(-.025turn) translate(10%, 45%);
+    box-shadow: inset 10em 1.5em 1.5em 1.5em forestgreen;
+    z-index: 10;
+}
+
+.sun {
+    width: 10rem;
+    height: 10rem;
+    background: #fff3e0;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    z-index: 0;
+    box-shadow: inset -.3em 0 .5em 0 #ffcc80,
+    0 0 .4em .25em wheat;
+}
+
+.sky {
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+}
+
+// 
+
 @include desktop {
     #index {
         grid-template-columns: repeat($desktop-grid, 1fr);
@@ -114,6 +182,9 @@ header {
 @include tablet-height {
     #index {
         grid-template-columns: repeat($tablet-height-grid, 1fr);
+    }
+
+    header {
         padding-top: $half-size;
     }
 
