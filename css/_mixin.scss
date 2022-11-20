@@ -28,20 +28,3 @@
         @content;
     }
 }
-
-@mixin grid {
-    display: grid;
-    grid-template-columns: inherit;
-    column-gap: inherit;
-}
-
-@mixin center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-@mixin min-height {
-    width: 100%;
-    height: min-content;
-}

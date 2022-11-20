@@ -9,219 +9,35 @@ html {
 
 body {
     @include full-size;
-}
-
-#index {
-    @include grid;
-    @include full-size;
-    box-sizing: border-box;
-    column-gap: $primary-size;
-    transition: padding .2s ease;
-    grid-template-rows: repeat(2, 1fr);
-}
-
-header {
-    display: flex;
-    width: 100%;
-    height: $primary-size * 2.5;
-    grid-column: 1 / -1;
-    justify-content: space-between;
-    padding-top: $primary-size * 1.5;
-    position: fixed;
-    top: 0;
-    z-index: 20;
-}
-
-.header_front {
-    display: flex;
-    min-width: 350px;
-    height: 100%;
-    justify-content: space-between;
-    font-weight: bold;
-}
-
-.logo {
-    @include center;
-    font-size: $primary-size * 2;
-    cursor: pointer;
-    padding: 0 $primary-size;
-    margin: 0 $primary-size;
-    transition: all .2s ease;
-}
-
-.header_front_menu {
-    @include center;
-    cursor: pointer;
-    padding: 0 $half-size;
-}
-
-.header_back {
-    display: flex;
-    min-width: 350px;
-    height: 100%;
-    justify-content: space-around
-}
-
-.header_back_menu {
-    @include center;
-    cursor: pointer;
-    padding: 0 $half-size;
-}
-
-.bar {
-    display: none;
-    font-size: $primary-size * 2;
-    padding: 0 $half-size;
-    cursor: pointer;
-}
-
-main {
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(at 50% 100%, #b71c1c, #ff6d00 30%, goldenrod 60%, #263238 200%);
-    grid-column: 1 / -1;
-    grid-row: 1;
-    position: relative;
-    z-index: 5;
+    scroll-behavior: smooth;
     overflow: hidden;
 }
 
-.mountain {
-    display: flex;
+#index {
+    @include full-size;
+    position: relative;
+}
+
+// .page {
+//     width: 100%;
+//     height: 100%;
+// }
+
+.container {
     width: 100%;
-    height: 50%;
-    align-items: flex-end;
-    box-sizing: border-box;
-    position: absolute;
-    bottom: 0;
-}
-
-.hill:first-child {
-    width: 60%;
-    height: 65%;
-    border-radius: 100% 100% 0 0;
-    // transform: scale(1, .2);
-    background: darkgreen;
-    transform: rotate(.015turn) translate(-10%, 40%) scale(1, 1);
-    box-shadow: inset -5em .8em 1em 1em green;
-    z-index: 5;
-}
-
-.hill:last-child {
-    width: 65%;
     height: 100%;
-    border-radius: 100% 100% 0 0;
-    background: green;
-    position: absolute;
-    right: 0;
-    transform: rotate(-.025turn) translate(10%, 45%);
-    box-shadow: inset 10em 1.5em 1.5em 1.5em forestgreen;
-    z-index: 10;
+
+    transition: .5s ease-in-out;
+    transition-delay: .2s;
+    transition-duration: .5s;
 }
 
-.sun {
-    width: 10rem;
-    height: 10rem;
-    background: #fff3e0;
-    border-radius: 50%;
-    position: absolute;
-    left: 50%;
-    bottom: 0;
-    transform: translateX(-50%);
-    z-index: 0;
-    box-shadow: inset -.3em 0 .5em 0 #ffcc80,
-    0 0 .4em .25em wheat;
-}
-
-.sky {
+section {
     width: 100%;
-    height: 50%;
-    position: absolute;
-    top: 0;
+    height: 100vh;
+    background: cornflowerblue;
 }
 
-// 
-
-@include desktop {
-    #index {
-        grid-template-columns: repeat($desktop-grid, 1fr);
-    }
-}
-
-@include tablet-width {
-    #index {
-        grid-template-columns: repeat($tablet-width-grid, 1fr);
-    }
-
-    .header_front {
-        min-width: auto;
-    }
-    
-    .logo {
-        
-    }
-    
-    .header_front_menu {
-        display: none;
-    }
-
-    .header_back {
-        min-width: auto;
-    }
-    
-    .header_back_menu {
-        display: none;
-    }
-
-    .bar {
-        @include center;
-        margin-right: $primary-size * 1.5;
-    }
-}
-
-@include tablet-height {
-    #index {
-        grid-template-columns: repeat($tablet-height-grid, 1fr);
-    }
-
-    header {
-        padding-top: $half-size;
-    }
-
-    .header_front {
-        min-width: auto;
-    }
-    
-    .logo {
-        font-size: $primary-size * 1.5;
-        padding: 0 $half-size;
-        margin: 0 $half-size;
-    }
-    
-    .header_front_menu {
-        display: none;
-    }
-
-    .header_back {
-        min-width: auto;
-    }
-    
-    .header_back_menu {
-        display: none;
-    }
-
-    .bar {
-        @include center;
-        margin-right: $half-size;
-    }
-}
-
-@include mobile {
-    #index {
-        grid-template-columns: repeat($mobile-grid, 1fr);
-    }
-
-    .bar {
-        font-size: $primary-size * 1.5; 
-    }
+section:nth-child(2n) {
+    background: brown;
 }

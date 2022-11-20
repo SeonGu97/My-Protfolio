@@ -1,23 +1,23 @@
 'ues strict';
 
-import Creator from "./creator.js";
+import Creator from "./setting/creator.js";
 const creator = Creator;
 
-import { Data } from "./data.js";
+import { Data } from "./setting/data.js";
 const data = Data;
 
-import { Loop } from "./loop.js";
+import { Loop } from "./setting/loop.js";
 const loop = Loop;
 
-import Header from "./header/header.js";
-import Main from "./main/main.js";
+import Container from "./container/container.js";
 
 export default class Index {
     constructor(creator, data, loop) {
         loop(creator, data[0], document.body);
 
-        const header = new Header(creator, data, loop);
-        const main = new Main(creator, data, loop);
+        this.data = data;
+
+        const container = new Container(creator, data, loop);
     }
 }
 
