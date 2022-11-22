@@ -10,6 +10,7 @@ import { Loop } from "./setting/loop.js";
 const loop = Loop;
 
 import Header from "./header/header.js";
+import Aside from "./aside/aside.js";
 // import Container from "./container/container.js";
 
 export default class Index {
@@ -17,6 +18,7 @@ export default class Index {
         loop(creator, data[0], document.body);
 
         const header = new Header(creator, data, loop);
+        const aside = new Aside(creator, data, loop);
         // const container = new Container(creator, data, loop);
     }
 }
