@@ -1,13 +1,13 @@
 'ues strict';
 
-import Left from "./left/left.js";
-import Right from "./right/right.js";
+import Roof from "./roof/roof.js";
+import Eaves from "./eaves/eaves.js";
 
 export default class Header {
     constructor(creator, data, loop) {
         loop(creator, data[1], data[0].name);
 
-        const left = new Left(creator, data, loop);
-        const right = new Right(creator, data, loop);
+        const roof = new Roof(creator, data, loop);
+        const eaves = new Eaves(creator, data, loop);
     }
 }

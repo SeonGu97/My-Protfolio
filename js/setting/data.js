@@ -122,6 +122,28 @@ export const Data = [
         parent: null,
     },
 
+    { // roof 11
+        name: 'roof',
+        element: 'section',
+        type: ['class'],
+        value: ['roof'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // eaves 12
+        name: 'eaves',
+        element: 'section',
+        type: ['class'],
+        value: ['eaves'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
     // { // container 
     //     name: 'container',
     //     element: 'div',

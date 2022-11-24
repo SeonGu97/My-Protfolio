@@ -15,7 +15,7 @@ body {
 #index {
     @include grid;
     @include full-size;
-    grid-template-rows: repeat($_14, 1fr);
+    grid-template-rows: repeat($_12, 1fr);
     column-gap: 1rem;
     row-gap: 1rem;
 }
@@ -24,7 +24,8 @@ header {
     display: flex;
     width: 100%;
     height: 100%;
-    background: linear-gradient(#003d33, #004d40);
+    flex-direction: column;
+    background: #006064;
     justify-content: space-between;
     box-sizing: border-box;
 
@@ -36,12 +37,23 @@ header {
     z-index: 10;
 }
 
+.roof {
+    width: 100%;
+    height: 100%;
+    background: #00363a;
+}
+
+.eaves {
+    display: flex;
+    justify-content: space-between;
+}
+
 .left {
     display: flex;
     width: auto;
-    height: calc(100% - 1rem);
-    padding: .5rem 0;
+    height: 100%;
     gap: 1rem;
+    box-sizing: border-box
 }
 
 .logo {
@@ -49,9 +61,9 @@ header {
     width: 6.25rem;
     height: 100%;
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: bold;
-    color: #cfd8dc;
+    color: #e0f7fa;
 }
 
 .menu_wrap {
@@ -66,13 +78,13 @@ header {
     height: 100%;
     cursor: pointer;
     font-weight: bold;
-    color: #b0bec5;
+    color: #e0f7fa;
 }
 
 .right {
     width: auto;
-    height: calc(100% - 1rem);
-    padding: .5rem 0;
+    height: 100%;
+    box-sizing: border-box;
 }
 
 .option {
@@ -88,6 +100,7 @@ header {
     height: 100%;
     cursor: pointer;
     font-weight: bold;
+    color: #000a12;
 }
 
 .bar {
@@ -106,10 +119,18 @@ aside {
 
     .item {
         width: calc(100% - 1rem);
+        height: .75rem;
         position: absolute;
-        background: #fce4ec;
+        background: linear-gradient(#cfd8dc 95%, #b0bec5 5%);
         margin: 0 .5rem;
+        padding: .75rem 0;
         color: #263238;
+        transition: .4s;
+        border-radius: .25rem;
+
+        &:first-child {
+            font-size: .8rem;
+        }
     }
 }
 
@@ -126,8 +147,16 @@ aside {
         grid-template-columns: repeat($_12, 1fr);
     }
 
-    header {
+    .eaves {
         padding: 0 2rem;
+    }
+
+    .left {
+        padding: .65rem 0;
+    }
+
+    .right {
+        padding: .65rem 0;
     }
     
     aside {
@@ -140,8 +169,24 @@ aside {
         grid-template-columns: repeat($_8, 1fr);
     }
 
-    header {
+    .eaves {
         padding: 0 1rem;
+    }
+
+    .left {
+        padding: .55rem 0;
+    }
+
+    .right {
+        padding: .55rem 0;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        font-size: .9rem;
     }
 
     .option {
@@ -150,6 +195,7 @@ aside {
 
     .bar {
         @include flex-center;
+        font-size: 1.75rem;
     }
 }
 
@@ -158,8 +204,25 @@ aside {
         grid-template-columns: repeat($_8, 1fr);
     }
 
-    header {
+    .eaves {
         padding: 0 1rem;
+    }
+
+    .left {
+        padding: .55rem 0;
+    }
+
+    .right {
+        padding: .55rem 0;
+    }
+
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .menu {
+        font-size: .9rem;
     }
 
     .option {
@@ -168,6 +231,7 @@ aside {
 
     .bar {
         @include flex-center;
+        font-size: 1.75rem;
     }
 }
 
@@ -176,7 +240,7 @@ aside {
         grid-template-columns: repeat($_4, 1fr);
     }
 
-    header {
+    .eaves {
         padding: 0 1rem;
     }
 
