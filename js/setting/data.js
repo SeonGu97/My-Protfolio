@@ -144,14 +144,47 @@ export const Data = [
         parent: null,
     },
 
-    // { // container 
-    //     name: 'container',
-    //     element: 'div',
-    //     type: ['class'],
-    //     value: ['container'],
-    //     text: [],
-    //     number: 1,
-    //     array: [],
-    //     parent: null,
-    // },
+    { // container 13
+        name: 'container',
+        element: 'div',
+        type: ['class'],
+        value: ['container'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // main 14
+        name: 'main',
+        element: 'main',
+        type: [],
+        value: [],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // roof_tile 15
+        name: 'roof_tile',
+        element: 'div',
+        type: ['class'],
+        value: ['roof_tile'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // tile 16
+        name: 'tile',
+        element: 'div',
+        type: ['class'],
+        value: ['tile'],
+        text: [],
+        number: 2,
+        array: [],
+        parent: null,
+    },
 ];

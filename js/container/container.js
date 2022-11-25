@@ -1,7 +1,11 @@
 'ues strict';
 
+import Main from "./main/main.js";
+
 export default class Container {
     constructor(creator, data, loop) {
-        loop(creator, data[2], data[0].name);
+        loop(creator, data[13], data[0].name);
+
+        const main = new Main(creator, data, loop);
     }
 }
