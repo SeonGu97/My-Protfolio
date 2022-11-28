@@ -187,4 +187,92 @@ export const Data = [
         array: [],
         parent: null,
     },
+
+    { // fade 17
+        name: 'fade',
+        element: 'section',
+        type: ['class'],
+        value: ['fade'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // btns 18
+        name: 'btns',
+        element: 'div',
+        type: ['class'],
+        value: ['btns'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // prev 19
+        name: 'prev',
+        element: 'btn',
+        type: ['class'],
+        value: ['prev'],
+        text: ['prev'],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // next 20
+        name: 'next',
+        element: 'btn',
+        type: ['class'],
+        value: ['next'],
+        text: ['next'],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // BG 21
+        name: 'BG',
+        element: 'div',
+        type: ['class'],
+        value: ['BG'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // BG_item 22
+        name: 'BG_item',
+        element: 'div',
+        type: ['class'],
+        value: ['BG_item'],
+        text: [1, 2 , 3, 4, 5],
+        number: 5,
+        array: [],
+        parent: null,
+    },
+
+    { // slider 23
+        name: 'slider',
+        element: 'section',
+        type: ['class'],
+        value: ['slider'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+    
+    { // slider_item 24
+        name: 'slider_item',
+        element: 'div',
+        type: ['class'],
+        value: ['slider_item'],
+        text: [4, 5, 1, 2, 3, 4, 5, 1, 2],
+        number: 9,
+        array: [],
+        parent: null,
+    },
 ];

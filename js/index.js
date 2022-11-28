@@ -13,6 +13,7 @@ import Header from "./header/header.js";
 import Aside from "./aside/aside.js";
 import Container from "./container/container.js";
 import Roof_tile from "./roof_tile/roof_tile.js";
+import Fade from "./fade/fade.js";
 
 export default class Index {
     constructor(creator, data, loop) {
@@ -22,6 +23,7 @@ export default class Index {
         const aside = new Aside(creator, data, loop);
         const container = new Container(creator, data, loop);
         const roof_tile = new Roof_tile(creator, data, loop);
+        const fade = new Fade(creator, data, loop);
     }
 }
 
