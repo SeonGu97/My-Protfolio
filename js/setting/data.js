@@ -143,4 +143,81 @@ export const Data = [
         array: [],
         parent: null,
     },
+
+    { // tail 13
+        name: 'tail',
+        element: 'div',
+        type: ['class'],
+        value: ['tail'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // foot 14
+        name: 'foot',
+        element: 'div',
+        type: ['class'],
+        value: ['foot'],
+        text: [],
+        number: 11,
+        array: [],
+        parent: null,
+    },
+
+    { // sole 15
+        name: 'sole',
+        element: 'div',
+        type: ['class'],
+        value: ['sole'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // toe 16
+        name: 'toe',
+        element: 'div',
+        type: ['class'],
+        value: ['toe'],
+        text: [],
+        number: 4,
+        array: [],
+        parent: null,
+    },
+
+    { // foot_print 17
+        name: 'foot_print',
+        element: 'div',
+        type: ['class'],
+        value: ['foot_print'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+    
+    { // bottom 18
+        name: 'bottom',
+        element: 'section',
+        type: ['class'],
+        value: ['bottom'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // footer 19
+        name: 'footer',
+        element: 'footer',
+        type: [],
+        value: [],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
 ];
