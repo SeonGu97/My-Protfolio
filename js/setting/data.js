@@ -220,4 +220,48 @@ export const Data = [
         array: [],
         parent: null,
     },
+
+    { // face 20
+        name: 'face',
+        element: 'div',
+        type: ['class'],
+        value: ['face'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // eyes 21
+        name: 'eyes',
+        element: 'div',
+        type: ['class'],
+        value: ['eyes'],
+        text: [],
+        number: 2,
+        array: [],
+        parent: null,
+    },
+
+    { // hole 22
+        name: 'hole',
+        element: 'div',
+        type: ['class'],
+        value: ['hole'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
+
+    { // nose 23
+        name: 'nose',
+        element: 'div',
+        type: ['class'],
+        value: ['nose'],
+        text: [],
+        number: 1,
+        array: [],
+        parent: null,
+    },
 ];

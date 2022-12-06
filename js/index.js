@@ -14,6 +14,7 @@ import Container from "./container/container.js";
 import Foot from "./foot/foot.js";
 import Foot_Print from "./foot_print/foot_print.js";
 import Bottom from "./bottom/bottom.js";
+import Face from "./face/face.js";
 
 export default class Index {
     constructor(creator, data, loop) {
@@ -24,6 +25,7 @@ export default class Index {
         const bottom = new Bottom(creator, data, loop);
         const foot_print = new Foot_Print(creator, data, loop);
         const foot = new Foot(creator, data, loop);
+        const face = new Face(creator, data, loop);
     }
 }
 
