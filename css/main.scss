@@ -4,7 +4,6 @@
 
 * {
     box-sizing: border-box;
-    overflow: hidden;
 }
 
 html {
@@ -24,13 +23,23 @@ body {
 }
 
 @include tablet-width {
+    #index {
+        max-width: 1024px;
+    }
 
+    aside {
+        display: none;
+    }
 }
 
 @include tablet-height {
-
+    #index {
+        max-width: 768px;
+    }
 }
 
 @include mobile {
-
+    #index {
+        max-width: 480px;
+    }
 }
